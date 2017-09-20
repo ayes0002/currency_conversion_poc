@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app='CurrencyApp'>
+<!-- money.js
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Convertion</title>
+    <script src='angular.min.js'></script>
+    <script src='money.js-lib/money.min.js'></script>
+    <script src='main.js'></script>
+    
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+   <h1 class="jumbotron">Currency Conversion!</h1>
+    <form ng-controller="conversionCtrl">
+    <text>Put amount:</text>
+    <input type="text" name="Amount" ng-model="amount">
+    <select name="currencies" id="currencies"
+      ng-options="currency.name for currency in data.availableCurrencies track by currency.id"
+      ng-model="data.selectedCurrency"></select>
+
+    <button type="submit" ng-click="exc(amount)">Convert</button><br><br>
+        <p>Your total is: {{result}} CAD</p>
+
+</form>
+</body>
+-->
+
+<!--open exchange rates-->
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Convertion</title>
+    <script src='angular.min.js'></script>
+    <script src='openexchangerates/ng-cordova-oauth/dist/ng-cordova-oauth.min.js'></script>
+    <script src='money.js-lib/money.min.js'></script>
+    <script src="config.js"></script>
+    <script src='main.js'></script>
+    
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+   <h1 class="jumbotron">Currency Conversion!</h1>
+    <form ng-controller="conversionCtrl">
+    <text>Put amount:</text>
+    <input type="text" name="Amount" ng-model="amount">
+    <select name="currencies" id="currencies"
+      ng-options="currency.name for currency in data.availableCurrencies track by currency.id"
+      ng-model="data.selectedCurrency"></select>
+
+    <button type="submit" ng-click="exc(amount)">Convert</button><br><br>
+        <p>Your total is: {{result}} CAD</p>
+
+</form>
+</body>
+</html>
